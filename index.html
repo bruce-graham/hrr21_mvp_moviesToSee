@@ -8,7 +8,16 @@
 
   <body ng-app='moviesToSee'>
     <div id='container'ng-controller='MovieController'>
+
+      <form action="/movies method="post">
+        <input type='text' value='add movie here'>
+        <button type='submit'>Save Movie</button>
+      </form><hr>
+
       <p> {{data}} </p>
     </div>
   </body>
 </html>
+
+
+
