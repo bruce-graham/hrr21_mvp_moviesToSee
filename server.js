@@ -14,38 +14,38 @@ app.get('/', function(req, res) {
 });
 
 
-app.get('/movies', function (req, res){
+// app.get('/movies', function (req, res){
 
-  Movies.find(function(err, movies) {
-    if (err) {
-      res.send(err);
-    }
+//   Movies.find(function(err, movies) {
+//     if (err) {
+//       res.send(err);
+//     }
 
-    res.json(movies);
-  })
-});
+//     res.json(movies);
+//   })
+// });
 
 
-app.post('/movies', function(req, res) {
-  Movies.create({
-    title: req.boyd.text,
-    done: false
-  }), function(err, movie) {
-    if (err) {
+// app.post('/movies', function(req, res) {
+//   Movies.create({
+//     title: req.boyd.text,
+//     done: false
+//   }), function(err, movie) {
+//     if (err) {
 
-      res.send(err);
-    }
+//       res.send(err);
+//     }
 
-    Movies.find(function(err, movies) {
-      if (err) {
-        res.send(err);
-      }
+//     Movies.find(function(err, movies) {
+//       if (err) {
+//         res.send(err);
+//       }
 
-      res.json(movies);
-    });
-  }
+//       res.json(movies);
+//     });
+//   }
 
-})
+// })
 
 app.listen(8080, function() {
   console.log('Express listening on port 8080');
