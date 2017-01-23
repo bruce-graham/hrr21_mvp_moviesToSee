@@ -7,7 +7,7 @@ var morgan = require('morgan');
 
 app.use(express.static('./'));
 
-mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds127439.mlab.com:27439/db_moves_to_see');
+mongoose.connect('mongodb://databaseuser:GoodTimes5!@ds127439.mlab.com:27439/db_moves_to_see');
 
 app.get('/', function(req, res) {
   res.sendFile('index.html');
