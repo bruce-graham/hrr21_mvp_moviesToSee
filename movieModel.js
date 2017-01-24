@@ -1,5 +1,9 @@
 var mongoose = require('mongoose');
 
-var Movie = new mongoose.Schema({
+var movieSchema = mongoose.Schema({
   title: String
-})
+});
+
+var Movie = mongoose.model('Movie', movieSchema);
+
+movieSchema.pre('save')
