@@ -45,6 +45,6 @@ app.get('/', function(req, res) {
 
 // })
 
-app.listen(8080, function() {
-  console.log('Express listening on port 8080');
+app.listen(process.env.PORT || 8080, function() {
+  console.log('Express listening on port process.env.PORT || 8080');
 });
