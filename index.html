@@ -13,7 +13,7 @@
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               </button>
-              <a class="navbar-brand" href="index.html">Movies To Watch</a>
+              <a class="navbar-brand" href="index.html">Movies To See</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -27,22 +27,21 @@
     <div class="container marketing">
       <div class="row">
         <div class="col-lg-4">
-          <form ng-submit="addMovie()">
+          <form ng-submit="addMovie(movieInput)">
             <input type="text" ng-model="movieInput" size="38" placeholder="add movie here">
             <input type="submit" value='add movie'>
           </form>
 
           <div ng-repeat="n in movieList">
             <input type="checkbox" ng-model="n.done"> <span ng-bind="n.title"></span>
-          </div>
-          <div>
-            <button ng-click="deleteMovie()">Delete Movie</button>
+            <button ng-click="deleteMovie(n.title)">Delete Movie</button>
           </div>
         </div>
       </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     <script src='app.js'></script>
   </body>
 </html>
