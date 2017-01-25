@@ -24,12 +24,12 @@
         <div class="row">
           <div class="col-lg-12">
             <form ng-submit="addMovie(movieInput)">
-              <input class='fontblack' type="text" ng-model="movieInput" size="40" placeholder="add movie here">
+              <input class='fontblack' type="text" ng-model="movieInput" size="40" placeholder="type movie here">
               <input type="submit" class='fontblack' value='add movie'>
             </form><br>
 
             <div ng-repeat="n in movieList">
-              <input  type="checkbox" ng-model="n.done"> <span class='moviesize' ng-bind="n.title"></span>
+              <input  type="checkbox" ng-model="n.done"> <span class='moviesize' ng-bind="n.title"> </span>
               <button class='fontblack' ng-click="deleteMovie(n.title)">Delete Movie</button>
           </div>
         </div>
